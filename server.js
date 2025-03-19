@@ -12,6 +12,10 @@ app.use(bodyParser.json());
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+app.get("/", async (req, res) => {
+    res.json({ message: "LIDS API workinf perfect! 🚀" });
+});
+
 app.post("/send-email-for-leed", async (req, res) => {
     const { email, name, phone, company, message } = req.body;
 
