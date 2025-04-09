@@ -18,6 +18,7 @@ app.get("/test-connection", async (req, res) => {
 });
 
 app.post("/send-email-for-leed", async (req, res) => {
+    console.log("✅ Intern email endpoint hit");
     const { email, name, phone, company, message } = req.body;
 
     // Verifica que todos los campos requeridos estén presentes
