@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 const { Resend } = require("resend");
 
 const app = express();
-const port = 3000;
+const port = 5002;
 
 app.use(cors());
 app.use(bodyParser.json());
