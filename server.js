@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-app.get("/", async (req, res) => {
+app.get("/test-connection", async (req, res) => {
     res.json({ message: "LIDS API workinf perfect! 🚀" });
 });
 
