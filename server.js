@@ -13,7 +13,8 @@ app.use(bodyParser.json());
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 app.get("/test-connection", async (req, res) => {
-    res.json({ message: "LIDS API workinf perfect! 🚀" });
+    console.log("✅ Connection test endpoint hit");
+    res.json({ message: "LIDS API working perfect! 🚀" });
 });
 
 app.post("/send-email-for-leed", async (req, res) => {
@@ -70,7 +71,7 @@ app.post("/send-email-for-leed", async (req, res) => {
             console.error(error);
             return res.status(500).json({ error: "Error al enviar el correo" });
         }
-
+        console.log("✅ Correo interno enviado satifactoriamente");
         res.status(200).json({ message: "Correo enviado con éxito", data });
     } catch (error) {
         console.error(error);
